@@ -1,3 +1,8 @@
+# Created by Sean Shin
+# Note: To have this successfully work for a detector built with a thermistor, you must find out
+# the ACoefficient, BCoefficient, and CCoefficient of that specific thermistor. You can use 
+# the Steinhart-Hart equation to find out the A, B, and C coefficients for your own thermistor.
+
 int thermistorPin = 0;
  
 float voltageInput = 5;
