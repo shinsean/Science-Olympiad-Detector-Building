@@ -45,7 +45,7 @@ void loop() {
 
   // Print the voltage.
   Serial.print(voltageOutput);
-  Serial.println("mV");
+  Serial.println("V");
 
   // Print the temperature.
   Serial.print(temperature);
