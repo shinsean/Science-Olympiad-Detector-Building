@@ -11,9 +11,9 @@ float voltageOutput;
 float resistorResistance = 100000;
 float thermistorResistance;
  
-float ACoefficient = -318.8113444e-03;
-float BCoefficient = 494.3021254e-04;
-float CCoefficient = -1720.624125e-07;
+float ACoefficient = -0.004915617852;
+float BCoefficient = 0.001599130566;
+float CCoefficient = -0.000008148359156;
  
 float temperature;
  
@@ -54,7 +54,7 @@ void loop() {
   // Code for turning on the desired LEDs
   
   // LED for the lowest temperature.
-  if (temperature < 15) {
+  if (temperature >= 0 && temperature < 25) {
     // Red LED
     digitalWrite(13, HIGH);
 
@@ -63,7 +63,7 @@ void loop() {
     digitalWrite(11, LOW);
   }
   // LED for the middle temperature.
-  if (temperature > 15 && temperature < 30) {
+  if (temperature >= 25 && temperature < 50) {
     //Green LED
     digitalWrite(12, HIGH);
 
@@ -72,7 +72,7 @@ void loop() {
     digitalWrite(11, LOW);
   }
   // LED for the highest temperature.
-  if (temperature > 30) {
+  if (temperature >= 50 && temperature < 75) {
     digitalWrite(11, HIGH);
 
     // Turn off other LEDs
