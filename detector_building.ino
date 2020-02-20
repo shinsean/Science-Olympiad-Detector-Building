@@ -56,7 +56,7 @@ void loop() {
   Serial.println("V");
 
   // Print the temperature.
-  Serial.print(temperature);
+  Serial.print(corrected_temperature);
   Serial.println("° Celsius");
 
   // Code for turning on the desired LEDs
