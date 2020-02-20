@@ -62,7 +62,7 @@ void loop() {
   // Code for turning on the desired LEDs
   
   // LED for the lowest temperature.
-  if (temperature >= 0 && temperature < 25) {
+  if (corrected_temperature >= 0 && corrected_temperature < 25) {
     // Red LED
     digitalWrite(13, HIGH);
 
@@ -71,7 +71,7 @@ void loop() {
     digitalWrite(11, LOW);
   }
   // LED for the middle temperature.
-  if (temperature >= 25 && temperature < 50) {
+  if (corrected_temperature >= 25 && corrected_temperature < 50) {
     //Green LED
     digitalWrite(12, HIGH);
 
@@ -80,7 +80,7 @@ void loop() {
     digitalWrite(11, LOW);
   }
   // LED for the highest temperature.
-  if (temperature >= 50 && temperature < 75) {
+  if (corrected_temperature >= 50 && corrected_temperature < 75) {
     digitalWrite(11, HIGH);
 
     // Turn off other LEDs
