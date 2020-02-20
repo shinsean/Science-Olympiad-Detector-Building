@@ -46,10 +46,10 @@ void loop() {
   temperature_correction = ((0.0002316 * (raw_temperature) * (raw_temperature) * (raw_temperature)) - (0.01962 * (raw_temperature) * (raw_temperature)) + (0.3821 * (raw_temperature)) + 0.4969);
   
   // Recalculate the temperature with the calculated correction.
-  refined_temperature = raw_temperature + temperature_correction;
+  corrected_temperature = raw_temperature + temperature_correction;
   
   // Convert from Kelvin to Celsius.
-  refined_temperature = refined_temperature - 273.15;
+  corrected_temperature = corrected_temperature - 273.15;
 
   // Print the voltage.
   Serial.print(voltageOutput);
