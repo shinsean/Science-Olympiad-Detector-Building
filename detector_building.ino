@@ -43,10 +43,10 @@ void loop() {
   raw_temperature = 1/(ACoefficient + (BCoefficient * log(thermistorResistance)) + (CCoefficient * (log(thermistorResistance)) * (log(thermistorResistance)) * (log(thermistorResistance))));
   
   // Calculates the amount of correction needed to get an accurate reading.
-  temperature_correction = ((0.0002316 * (raw_temperature) * (raw_temperature) * (raw_temperature)) - (0.01962 * (raw_temperature) * (raw_temperature)) + (0.3821 * (raw_temperature)) + 0.4969)
+  temperature_correction = ((0.0002316 * (raw_temperature) * (raw_temperature) * (raw_temperature)) - (0.01962 * (raw_temperature) * (raw_temperature)) + (0.3821 * (raw_temperature)) + 0.4969);
   
   // Recalculate the temperature with the calculated correction.
-  refined_temperature = raw_temperature + temperature_correction
+  refined_temperature = raw_temperature + temperature_correction;
   
   // Convert from Kelvin to Celsius.
   refined_temperature = refined_temperature - 273.15;
