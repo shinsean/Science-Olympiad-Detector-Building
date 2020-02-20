@@ -41,15 +41,16 @@ void loop() {
  
   // Finds the actual temperature by using thermistorResistance and the coefficients of this particular thermistor in the Steinhart Hart Equation.
   raw_temperature = 1/(ACoefficient + (BCoefficient * log(thermistorResistance)) + (CCoefficient * (log(thermistorResistance)) * (log(thermistorResistance)) * (log(thermistorResistance))));
+
+  // Convert from Kelvin to Celsius.
+  raw_temperature = raw_temperature - 273.15;
   
   // Calculates the amount of correction needed to get an accurate reading.
   temperature_correction = ((0.0002316 * (raw_temperature) * (raw_temperature) * (raw_temperature)) - (0.01962 * (raw_temperature) * (raw_temperature)) + (0.3821 * (raw_temperature)) + 0.4969);
+  Serial.println(temperature_correction);
   
   // Recalculate the temperature with the calculated correction.
   corrected_temperature = raw_temperature + temperature_correction;
-  
-  // Convert from Kelvin to Celsius.
-  corrected_temperature = corrected_temperature - 273.15;
 
   // Print the voltage.
   Serial.print(voltageOutput);
