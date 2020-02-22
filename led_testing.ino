@@ -11,6 +11,9 @@ void setup() {
 }
  
 void loop() {
+  // Assign testing temperature.
+  testing_temperature = 20;
+  
   // Print the temperature.
   Serial.print(testing_temperature);
   Serial.println("° Celsius");
