@@ -83,10 +83,10 @@ void loop() {
   // LED for the highest temperature.
   if (corrected_temperature >= 50 && corrected_temperature < 75) {
     // Blue LED   
-    digitalWrite(13, HIGH);
+    digitalWrite(11, HIGH);
 
     // Turn off other LEDs
-    digitalWrite(11, LOW);
+    digitalWrite(13, LOW);
     digitalWrite(12, LOW);
   } else {
     // Turn off all LEDs if they do not fall within parameters.
