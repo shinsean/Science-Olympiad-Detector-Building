@@ -88,6 +88,11 @@ void loop() {
     // Turn off other LEDs
     digitalWrite(11, LOW);
     digitalWrite(12, LOW);
+  } else {
+    // Turn off all LEDs if they do not fall within parameters.
+    digitalWrite(13, LOW);
+    digitalWrite(12, LOW);
+    digitalWrite(11, LOW);
   }
  
   delay(500);
