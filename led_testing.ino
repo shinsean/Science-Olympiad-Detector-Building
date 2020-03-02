@@ -30,7 +30,7 @@ void loop() {
     digitalWrite(11, LOW);
   }
   // LED for the middle temperature.
-  if (testing_temperature >= 25 && testing_temperature < 50) {
+  else if (testing_temperature >= 25 && testing_temperature < 50) {
     // Green LED
     digitalWrite(12, HIGH);
 
@@ -39,7 +39,7 @@ void loop() {
     digitalWrite(11, LOW);
   }
   // LED for the highest temperature.
-  if (testing_temperature >= 50 && testing_temperature < 75) {
+  else if (testing_temperature >= 50 && testing_temperature < 75) {
     // Blue LED   
     digitalWrite(11, HIGH);
 
